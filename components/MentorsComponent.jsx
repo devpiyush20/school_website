@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const MentorsComponent = () => {
   return (
-    <div className="container mx-auto py-12 flex justify-center items-center">
+    <div className="container mx-auto py-12 flex justify-center items-center shadow-2xl ">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="bg-gray-100 p-4 rounded-lg text-center">
           <img src="/assets/m1.png" alt="Mentor 1" className="mx-auto w-full rounded-lg" />

@@ -6,6 +6,7 @@ import PrincipleMessage from "./PrincipleMessage";
 import ContactComponent from "./Contact";
 import MentorsComponent from "./MentorsComponent";
 import CurriculumComponent from "./CurriculumComponent";
+import AboutSchool from "./AboutSchool";
 
 
 
@@ -33,10 +34,14 @@ const Home = () => {
       principleName={principleName}
       message={message}
     
-      className="md:mt-5 mt-5"
+      className="md:mt-5 mt-5 shadow-2xl"
     />
+
+
+    <AboutSchool/>
+    <MentorsComponent />
     <ContactComponent/>
-    <MentorsComponent/>
+    
     <CurriculumComponent/>
   </div>
   

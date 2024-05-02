@@ -47,7 +47,7 @@ const hidelinks = [
 export default function Navbar() {
     const [nav, setNav] = useState(false);
     return (
-        <div className=" navHeader flex justify-between items-center w-full h-20 px-4 text-white bg-white nav">
+        <div className=" navHeader flex justify-between items-center w-full h-20 px-4 text-white bg-white nav shadow-2xl">
             <div>
                 <h1 className="text-5xl font-signature ml-2">
                     <Link href='/'>
