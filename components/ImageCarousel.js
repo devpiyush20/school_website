@@ -1,6 +1,5 @@
 'use client'
 import React, { useState } from "react";
-import { TECarousel, TECarouselItem } from "tw-elements-react";
 const images = [
   "/assets/img1.jpg",
   "/assets/img2.jpg",
