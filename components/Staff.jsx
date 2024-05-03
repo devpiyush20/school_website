@@ -1,4 +1,5 @@
-import AboutSchool from "./AboutSchool"
+'use client'
+import { useState } from "react";
 import TeacherCard from "./TeacherCard"
 const teachersData = [
     {
@@ -92,12 +93,36 @@ const teachersData = [
       "qual": ""
     }
   ];
+  const nonTeaching = [
+    {
+      "name":"हरी सिंह",
+    "post":"चपरासी",
+    "qual": ""
+    },{
+      "name":"विजय सिंह",
+    "post":"चौकीदार",
+    "qual": ""
+    },{
+      "name":"नागेंद्र",
+    "post":"चौकीदार",
+    "qual": ""
+    },{
+      "name":"राजकिशोर",
+    "post":"सफाई कर्मी",
+    "qual": ""
+    },
+  ]
 const Staff = () => {
+  const [data, setData] = useState(teachersData)
   return (
     <>
+    <div className="flex flex-row itms-center justify-center gap-20 mt-10">
+      <span className="shadow-xl py-4 px-10 bg-black text-white cursor-pointer rounded" onClick={()=>setData(teachersData)}>शिक्षक</span>
+      <span className="shadow-xl py-4 px-10 bg-black text-white cursor-pointer rounded" onClick={()=>setData(nonTeaching)}>सहकर्मी</span>
+    </div>
     <div className="flex flex-wrap gap-3 align-center justify-center p-10">
-    {teachersData.map((teacher, index) => (
-      <TeacherCard key={index} {...teacher} />
+    {data?.map((elem, index) => (
+      <TeacherCard key={index} {...elem} />
     ))}
 </div>
     </>
