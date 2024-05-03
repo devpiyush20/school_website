@@ -1,6 +1,9 @@
 // components/ImageCarousel.js
 "use client"
 import React, { useState } from "react";
+import { FaChevronCircleLeft } from "react-icons/fa";
+import { FaChevronCircleRight } from "react-icons/fa";
+
 const images = [
   "/assets/img1.jpg",
   "/assets/img2.jpg",
@@ -19,22 +22,12 @@ const ImageCarousel = () => {
   };
 
   return (
-    <div className="w-full">
-      <button
-        className="absolute ml-1 z-3 top-1/2 transform-translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-l"
-        onClick={goToPrevSlide}
-      >
-        Previous
-      </button>
-      <div className="flex items-center justify-center">
-        <img style={{height:"450px"}}   src={images[currentIndex]} alt="carousel" className=" z-1 w-full" />
-      <button
-        className=" absolute bt-l z-3 top-1/2 transform-translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-r"
-        onClick={goToNextSlide}
-      >
-        Next
-      </button>
+    <div className="w-full ">
+      <FaChevronCircleLeft className="iconn btn-l" onClick={goToPrevSlide}/>
+      <div className="flex items-center justify-center ">
+        <img style={{maxHeight:"450px"}}   src={images[currentIndex]} alt="carousel" className="imgg w-full" />
       </div>
+        <FaChevronCircleRight className="btn-r iconn" onClick={goToNextSlide}/>
     </div>
   );
 };

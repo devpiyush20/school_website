@@ -3,8 +3,29 @@
 @tailwind utilities;
 
 .nvv{
+  position: relative;
   z-index: 10;
 }
-.bt-l{
-  right: 5px;
+.btn-r{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  z-index: 5;
+  filter: invert(1);
+
+}
+.btn-l{
+  top: 50%;
+  position: absolute;
+  left: 20px;
+  z-index: 5;
+  filter: invert(1);
+
+}
+.iconn{
+  transform: scale(3);
+}
+.imgg{
+  position: relative;
+  z-index: 1;
 }
