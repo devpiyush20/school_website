@@ -13,7 +13,6 @@ import AboutSchool from "./AboutSchool";
 
 
 
-
 const Home = () => {
   
   const principleName = "John Doe";
