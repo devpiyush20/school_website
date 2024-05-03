@@ -22,6 +22,10 @@ const links = [
         id: 4,
         link: "contact",
     },
+    {
+        id:5,
+        link:"staff"
+    }
   
 ];
 const hidelinks = [
@@ -41,13 +45,17 @@ const hidelinks = [
         id: 4,
         link: "contact",
     },
+    {
+        id:5,
+        link:"staff"
+    }
  
 ];
 
 export default function Navbar() {
     const [nav, setNav] = useState(false);
     return (
-        <div className=" navHeader flex justify-between items-center w-full h-20 px-4 text-white bg-white nav shadow-2xl">
+        <div className="nvv navHeader flex justify-between items-center w-full h-20 px-4 text-white bg-white nav shadow-2xl">
             <div>
                 <h1 className="text-5xl font-signature ml-2">
                     <Link href='/'>
@@ -76,6 +84,13 @@ export default function Navbar() {
 
             {nav && (
                 <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-white from-black to-gray-800 text-gray-500">
+                    <div>
+                <h1 className="text-5xl font-signature ml-2">
+                    <Link href='/'>
+                    <Image width={450} height={250}    src="/assets/logo.png" alt="logo"/>
+                    </Link>
+                </h1>
+            </div>
                     {hidelinks.map(({ id, link }) => (
                         <li
                             key={id}
