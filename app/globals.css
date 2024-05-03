@@ -2,21 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+.cr{
+  margin-top: 60px;
+}
 .nvv{
   position: relative;
   z-index: 10;
 }
 .btn-r{
-  position: absolute;
+  position: relative;
   right: 20px;
-  top: 50%;
+  top: 240px;
   z-index: 5;
   filter: invert(1);
 
 }
 .btn-l{
-  top: 50%;
-  position: absolute;
+  top: 240px;
+  position: relative;
   left: 20px;
   z-index: 5;
   filter: invert(1);
@@ -28,4 +31,9 @@
 .imgg{
   position: relative;
   z-index: 1;
+}
+@media screen and(min-width:500px) {
+  .cr{
+    margin-top: 0px;
+  }
 }
